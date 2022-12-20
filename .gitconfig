@@ -1,0 +1,15 @@
+[include]
+  # Valor por default para git; de esta manera, por defecto siempre usaremos nuestra cuenta personal
+  path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/Tinkin/"]
+  # Todos los proyectos que descarguemos o creemos a partir de esta ruta, usara tu cuenta de tu trabajo
+  path = ~/.gitconfig.job
+
+[includeIf "gitdir:~/Projects/"]
+  # Todos los proyectos que descarguemos o creemos a partir de esta ruta, usara tu cuenta personal
+  # este bloque es opcional, pero debes de asegurarte de colocar el primer bloque.
+  path = ~/.gitconfig.personal
+
+[init]
+  defaultBranch = main
