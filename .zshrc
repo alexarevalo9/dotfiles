@@ -114,3 +114,4 @@ prompt_dir() {
 }
 
 export PATH=$PATH:$HOME/bin
+alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
