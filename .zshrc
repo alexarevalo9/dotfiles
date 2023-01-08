@@ -102,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.zsh_profile
+alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -114,4 +116,3 @@ prompt_dir() {
 }
 
 export PATH=$PATH:$HOME/bin
-alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
