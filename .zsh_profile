@@ -1,0 +1,13 @@
+killport() {
+    sudo kill -9 $(sudo lsof -t -i:$1)
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+addToPathFront $HOME/.local/bin
+
+bindkey -s ^f "tmux-sessionizer\n"
