@@ -188,4 +188,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+## Bare repo alias
 alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
+
+bind -x '"\C-f":"tmux-sessionizer\n"'
+bind -x '"\C-n":"vscode-sessionizer\n"'
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
