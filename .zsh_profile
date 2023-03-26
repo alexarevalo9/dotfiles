@@ -12,3 +12,4 @@ addToPathFront $HOME/.local/bin
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^n "vscode-sessionizer\n"
+bindkey -s ^w "tmux-work-sessionizer\n"

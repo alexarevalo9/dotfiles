@@ -1,0 +1,15 @@
+tmux_running=$(pgrep tmux)
+frontend_window_name=twin-farms-front
+frontend_path=/home/alex/Tinkin/TwinFarms/twin-farms-front
+backend_window_name=twin-farms-back
+backend_path=/home/alex/Tinkin/TwinFarms/twin-farms-back
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -ds $frontend_window_name -c $frontend_path
+fi
+
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -ds $backend_window_name -c $backend_path 
+fi
+
