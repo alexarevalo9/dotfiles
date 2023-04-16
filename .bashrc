@@ -189,6 +189,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source ~/.config/macros/git.sh
 ## Bare repo alias
 alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
 
