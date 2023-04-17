@@ -1,6 +1,6 @@
 #!/bin/bash
 exec i3-msg 'workspace "1"; exec brave --profile-directory=Default' &
-sleep 2
+sleep 3
 
 exec i3-msg 'workspace "6"; exec brave --profile-directory="Profile 1"' &
-sleep 2
+sleep 3

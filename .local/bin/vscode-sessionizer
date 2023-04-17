@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Tinkin ~/Projects ~/ -mindepth 3 -maxdepth 3 | fzf)
+    selected=$(find ~/Tinkin ~/Projects ~/Courses ~/ -mindepth 2 -maxdepth 2 -not -path '*/\.*' | fzf)
 fi
 
 if [[ -z $selected ]]; then
