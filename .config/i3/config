@@ -587,9 +587,9 @@ bindsym $mod+t exec rofi -show window \
 #####################################
 # Start Work Workspace #
 #####################################
-bindsym $mod+w exec /usr/bin/slack; exec /usr/bin/discord; exec code ~/Tinkin/TwinFarms/twinfarms.code-workspace; exec ~/.local/bin/tmux-work-sessionizer; exec ~/.local/bin/i3-browser-windows
+bindsym $mod+w exec /usr/bin/slack; exec /usr/bin/discord; exec code ~/Tinkin/WUARDI/wuardi_front; exec ~/.local/bin/tmux-work-sessionizer; exec ~/.local/bin/i3-browser-windows
 
 #####################################
 # Keyboard Layout #
 #####################################
-exec --no-startup-id setxkbmap -layout 'us,es' -variant qwerty -option 'grp:alt_shift_toggle'
+exec --no-startup-id setxkbmap -layout 'us,es' -variant qwerty -option 'grp:alt_space_toggle'
