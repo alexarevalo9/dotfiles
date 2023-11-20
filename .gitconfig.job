@@ -1,6 +1,11 @@
 [user]
   name        = alex
   email       = alex@tinkin.one
+  signingkey = FAE761ECBB46D1D4
 
+[commit]
+	gpgsign = true
+  
 [url "git@trabajo.github.com"]
   insteadOf = git@github.com
+

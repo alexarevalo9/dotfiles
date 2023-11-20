@@ -114,6 +114,11 @@ prompt_context() {
 prompt_dir() {
   prompt_segment blue $CURRENT_FG '%1~'
 }
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export PATH=$PATH:$HOME/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+export GPG_TTY=$(tty)

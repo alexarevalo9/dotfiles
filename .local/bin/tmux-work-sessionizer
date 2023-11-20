@@ -1,8 +1,8 @@
 tmux_running=$(pgrep tmux)
-frontend_window_name=wuardi-front
-frontend_path=/home/alex/Tinkin/WUARDI/wuardi_front
-backend_window_name=wuardi-back
-backend_path=/home/alex/Tinkin/WUARDI/wuardi_back
+frontend_window_name=databits-webpage
+frontend_path=/home/alex/Tinkin/Databits/databits-webpage
+backend_window_name=databits-assessment
+backend_path=/home/alex/Tinkin/Databits/databits-assessment
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -ds $frontend_window_name -c $frontend_path
