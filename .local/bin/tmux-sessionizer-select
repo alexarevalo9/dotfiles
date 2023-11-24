@@ -1,0 +1,45 @@
+#!/bin/bash
+
+start_tmux_session() {
+    local session_name=$1
+    local session_path=$2
+
+    tmux_running=$(pgrep tmux)
+
+    tmux new-session -d -s "$session_name" -c "$session_path"
+}
+
+databits="👽 databits"
+skilt="🤖 skilt"
+wuardi="🔑 wuardi"
+
+options=("$databits" "$skilt" "$wuardi")
+
+PS3='Select a project: '
+
+select option in "${options[@]}"; do
+    case $option in
+    $databits)
+        start_tmux_session "databits-webpage" "/home/alex/Tinkin/Databits/databits-webpage"
+        start_tmux_session "databits-assessment" "/home/alex/Tinkin/Databits/databits-assessment"
+        tmux attach-session -t databits-webpage
+        break
+        ;;
+    $skilt)
+        start_tmux_session "skillt-frontend" "/home/alex/Tinkin/Skilt/skillt-frontend"
+        start_tmux_session "skillt-backend" "/home/alex/Tinkin/Skilt/skillt-backend"
+        tmux attach-session -t skillt-frontend
+        break
+        ;;
+    $wuardi)
+        start_tmux_session "wuardi_front" "/home/alex/Tinkin/WUARDI/wuardi_front"
+        start_tmux_session "wuardi_back" "/home/alex/Tinkin/WUARDI/wuardi_back"
+        tmux attach-session -t wuardi_front
+        break
+        ;;
+    *)
+        echo "Invalid option"
+        break
+        ;;
+    esac
+done
