@@ -22,18 +22,23 @@ select option in "${options[@]}"; do
     $databits)
         start_tmux_session "databits-webpage" "/home/alex/Tinkin/Databits/databits-webpage"
         start_tmux_session "databits-assessment" "/home/alex/Tinkin/Databits/databits-assessment"
+        code /home/alex/Tinkin/Databits/databits-webpage
+        code /home/alex/Tinkin/Databits/databits-assessment
         tmux attach-session -t databits-webpage
         break
         ;;
     $skilt)
         start_tmux_session "skillt-frontend" "/home/alex/Tinkin/Skilt/skillt-frontend"
         start_tmux_session "skillt-backend" "/home/alex/Tinkin/Skilt/skillt-backend"
+        code /home/alex/Tinkin/Skilt/skilt.code-workspace
         tmux attach-session -t skillt-frontend
         break
         ;;
     $wuardi)
         start_tmux_session "wuardi_front" "/home/alex/Tinkin/WUARDI/wuardi_front"
         start_tmux_session "wuardi_back" "/home/alex/Tinkin/WUARDI/wuardi_back"
+        code /home/alex/Tinkin/WUARDI/wuardi_front
+        code /home/alex/Tinkin/WUARDI/wuardi_back
         tmux attach-session -t wuardi_front
         break
         ;;
