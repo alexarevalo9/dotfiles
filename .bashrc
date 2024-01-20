@@ -193,7 +193,6 @@ alias config='/usr/bin/git --git-dir=/home/alex/.cfg/ --work-tree=/home/alex'
 
 bind -x '"\C-f":"tmux-sessionizer\n"'
 bind -x '"\C-n":"vscode-sessionizer\n"'
-. "$HOME/.cargo/env"
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export NVM_DIR="$HOME/.nvm"
