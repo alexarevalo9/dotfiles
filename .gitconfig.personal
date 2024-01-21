@@ -1,10 +1,7 @@
 [user]
   name        = alex
   email       = arevaloalex9@gmail.com
-  signingkey = ~/.ssh/id_rsa_personal.pub
-
-[gpg]
-	format = ssh
+  signingkey = AC00E248655F5F1C
 
 [commit]
 	gpgsign = true
