@@ -8,7 +8,6 @@ path = ~/.gitconfig.job
 
 [includeIf "gitdir:~/Projects/**/"]
 # Todos los proyectos que descarguemos o creemos a partir de esta ruta, usara tu cuenta personal
-# este bloque es opcional, pero debes de asegurarte de colocar el primer bloque.
 path = ~/.gitconfig.personal
 
 [init]
