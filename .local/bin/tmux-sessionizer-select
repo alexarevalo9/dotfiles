@@ -9,11 +9,12 @@ start_tmux_session() {
     tmux new-session -d -s "$session_name" -c "$session_path"
 }
 
+kamina="🐶 kamina"
 databits="👽 databits"
 skilt="🤖 skilt"
 wuardi="🔑 wuardi"
 
-options=("$databits" "$skilt" "$wuardi")
+options=("$kamina" "$databits" "$skilt" "$wuardi")
 
 PS3='Select a project: '
 
@@ -40,6 +41,14 @@ select option in "${options[@]}"; do
         code /home/alex/Tinkin/WUARDI/wuardi_front
         code /home/alex/Tinkin/WUARDI/wuardi_back
         tmux attach-session -t wuardi_front
+        break
+        ;;
+    $kamina)
+        start_tmux_session "kamina_front" "/home/alex/Tinkin/kamina/kamina-app"
+        start_tmux_session "kamina_back" "/home/alex/Tinkin/kamina/kamina-backend/services/user_management"
+        code /home/alex/Tinkin/kamina/kamina-app
+        code /home/alex/Tinkin/kamina/kamina-backend/services/user_management
+        tmux attach-session -t kamina_front
         break
         ;;
     *)

@@ -587,7 +587,7 @@ bindsym $mod+t exec rofi -show window \
 #####################################
 # Start Work Workspace #
 #####################################
-bindsym $mod+w exec /usr/bin/discord; exec ~/.local/bin/i3-browser-windows
+bindsym $mod+w exec ~/.local/bin/i3-browser-windows; exec /usr/bin/slack; exec /snap/bin/discord;
 
 #####################################
 # Keyboard Layout #
