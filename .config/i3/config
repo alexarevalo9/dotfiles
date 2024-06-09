@@ -317,13 +317,6 @@ workspace $ws6 output eDP
 workspace $ws7 output eDP
 workspace $ws8 output eDP
 
-# workspace $ws1 output eDP
-# workspace $ws2 output eDP
-# workspace $ws3 output eDP
-# workspace $ws4 output eDP
-# workspace $ws5 output eDP
-
-
 # bind program to workspace and focus to them on startup:
 assign [class="discord"] $ws7
 assign [class="Slack"] $ws8
