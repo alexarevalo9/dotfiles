@@ -317,6 +317,13 @@ workspace $ws6 output eDP
 workspace $ws7 output eDP
 workspace $ws8 output eDP
 
+# workspace $ws1 output eDP
+# workspace $ws2 output eDP
+# workspace $ws3 output eDP
+# workspace $ws4 output eDP
+# workspace $ws5 output eDP
+
+
 # bind program to workspace and focus to them on startup:
 assign [class="discord"] $ws7
 assign [class="Slack"] $ws8
@@ -598,3 +605,8 @@ exec --no-startup-id setxkbmap -layout 'us,es' -variant qwerty -option 'grp:alt_
 # Rofi Emoji Picker #
 #####################################
 bindsym $mod+period exec --no-startup-id rofi -modi emoji -show emoji
+
+#####################################
+# Exec monitors script #
+#####################################
+bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/monitors
